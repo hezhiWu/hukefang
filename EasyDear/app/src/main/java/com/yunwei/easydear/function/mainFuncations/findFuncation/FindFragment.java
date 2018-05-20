@@ -41,6 +41,7 @@ public class FindFragment extends BaseFragment {
     ViewPager mViewPager;
 
     private String[] tabNames;
+
     public static FindFragment newInstance() {
         if (fragment == null) {
             fragment = new FindFragment();
@@ -77,16 +78,16 @@ public class FindFragment extends BaseFragment {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 ((TextView)tab.getCustomView()).setTextColor(getResources().getColor(R.color.colorAccent));
-                ((TextView)tab.getCustomView()).setTextSize(TypedValue.COMPLEX_UNIT_SP,17);
-                int tabPosition = tab.getPosition();
-                requestArticleList(tabPosition);
-                Log.d(TAG, "----------> Find selected!! tabPosition = "  + tabPosition);
+//                ((TextView)tab.getCustomView()).setTextSize(TypedValue.COMPLEX_UNIT_SP,17);
+//                int tabPosition = tab.getPosition();
+//                requestArticleList(tabPosition);
+//                Log.d(TAG, "----------> Find selected!! tabPosition = "  + tabPosition);
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
                 ((TextView)tab.getCustomView()).setTextColor(getResources().getColor(R.color.gray));
-                ((TextView)tab.getCustomView()).setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+//                ((TextView)tab.getCustomView()).setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
             }
 
             @Override
@@ -109,8 +110,8 @@ public class FindFragment extends BaseFragment {
             /*设置默认选择*/
             if (i==0){
                 textView.setTextColor(getResources().getColor(R.color.colorAccent));
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,17);
-                requestArticleList(0);
+//                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,17);
+//                requestArticleList(0);
             }
             tab.setCustomView(textView);
         }

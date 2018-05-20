@@ -3,6 +3,8 @@ package com.yunwei.easydear.common.retrofit;
 import com.yunwei.easydear.BuildConfig;
 import com.yunwei.easydear.entity.ResponseModel;
 import com.yunwei.easydear.function.account.data.UserInfoEntity;
+import com.yunwei.easydear.function.dynamic.data.DynamicDetailEntity;
+import com.yunwei.easydear.function.dynamic.data.DynamicEntity;
 import com.yunwei.easydear.function.mainFuncations.articleFunction.ArticleItemEntity;
 import com.yunwei.easydear.function.mainFuncations.businessFunction.CardItemEntity;
 import com.yunwei.easydear.function.mainFuncations.businessFunction.BusinessDetailEntity;
@@ -166,6 +168,36 @@ public interface APIService {
                                                                          @Query("city") String city,
                                                                          @Query("area") String area,
                                                                          @Query("userNo") String userNo);
+
+    /**
+     * 动态列表
+     *
+     * @param pageSize
+     * @param pageCount
+     * @param keywords
+     * @param type
+     * @param province
+     * @param city
+     * @param area
+     * @return
+     */
+    @GET("article/listByKey")
+    Call<ResponseModel<List<DynamicEntity>>> queryDynamicList(@Query("pageSize") int pageSize,
+                                                              @Query("pageCount") int pageCount,
+                                                              @Query("keywords") String keywords,
+                                                              @Query("type") String type,
+                                                              @Query("province") String province,
+                                                              @Query("city") String city,
+                                                              @Query("area") String area);
+
+    /**
+     * 动态详情
+     *
+     * @param articleId
+     * @return
+     */
+    @GET("article/detailById")
+    Call<ResponseModel<DynamicDetailEntity>> queryDynamicDetails(@Query("articleId") int articleId);
 
     /**
      * 文章详情

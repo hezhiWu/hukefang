@@ -14,9 +14,9 @@ import com.yunwei.easydear.common.dialog.DialogFactory;
 import com.yunwei.easydear.base.BaseActivity;
 import com.yunwei.easydear.common.eventbus.EventConstant;
 import com.yunwei.easydear.common.eventbus.NoticeEvent;
+import com.yunwei.easydear.function.business.BusinessListFragment;
+import com.yunwei.easydear.function.dynamic.DynamicListFragment;
 import com.yunwei.easydear.function.mainFuncations.data.soure.MainRemoteRepo;
-import com.yunwei.easydear.function.mainFuncations.homeFuncation.HomeFragmentV2;
-import com.yunwei.easydear.function.mainFuncations.homeFuncation.HomeFragmentV3;
 import com.yunwei.easydear.function.mainFuncations.membershipFuncation.MembershipCodeFragment;
 import com.yunwei.easydear.function.mainFuncations.mineFuncation.MineFragment;
 import com.yunwei.easydear.function.mainFuncations.findFuncation.FindFragment;
@@ -94,9 +94,9 @@ public class MainActivity extends BaseActivity implements MainBottomNavigationBa
                 .addTabItem(R.mipmap.ic_car, R.string.main_block_tab)
                 .addTabItem(R.mipmap.ic_scan, R.string.main_qr_tab)
                 .addTabItem(R.mipmap.icon_main_tab_mine_pr, R.string.main_mine_tab);
-        mainBottomNavigationBar.addFragment(new HomeFragmentV3())
+        mainBottomNavigationBar.addFragment(new BusinessListFragment())
+                .addFragment(new DynamicListFragment())
                 .addFragment(MembershipCodeFragment.newInstance())
-                .addFragment(FindFragment.newInstance())
                 .addFragment(ScanQrFragment.newInstance())
                 .addFragment(MineFragment.newInstance());
         mainBottomNavigationBar.setDefaultFragment(0);
@@ -148,8 +148,8 @@ public class MainActivity extends BaseActivity implements MainBottomNavigationBa
                 setToolbarVisibility(View.GONE);
                 break;
             case TAB_FIND:
-                setToolbarCenterTitle(R.string.main_dynamic_tab);
-                setToolbarVisibility(View.GONE);
+                setToolbarCenterTitle("商家动态");
+                setToolbarVisibility(View.VISIBLE);
                 break;
             case TAB_TRAINGCODE:
                 this.currentTab=position;

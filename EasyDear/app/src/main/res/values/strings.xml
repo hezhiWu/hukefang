@@ -3,7 +3,7 @@
 
     <!--Main Tab-->
     <string name="main_home_tab">首页</string>
-    <string name="main_dynamic_tab">动态</string>
+    <string name="main_dynamic_tab">商家</string>
     <string name="main_block_tab">卡包</string>
     <string name="main_message_tab">消息</string>
     <string name="main_mine_tab">我的</string>
@@ -178,9 +178,22 @@
         <item>精选</item>
         <item>美食</item>
         <item>娱乐</item>
-        <item>时尚</item>
+        <item>住宿</item>
         <item>爱车</item>
-        <item>婚礼</item>
+        <item>健身</item>
+        <item>丽人</item>
+        <item>生活</item>
+    </array>
+
+    <array name="tab_type">
+        <item>jx</item>
+        <item>ms</item>
+        <item>yl</item>
+        <item>zs</item>
+        <item>ac</item>
+        <item>js</item>
+        <item>lr</item>
+        <item>sh</item>
     </array>
     <array name="track_mode">
         <item>步行</item>
