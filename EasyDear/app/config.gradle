@@ -9,7 +9,8 @@ android {
         }
         debug {
 //            buildConfigField "String", "DOMAI", "\"http://www.hfieta.com/\""
-            buildConfigField "String", "DOMAI", "\"http://www.somember.com/\""
+            buildConfigField "String", "DOMAI", "\"http://www.chaopoo.com/neweasydear-app/\""
+            buildConfigField "String", "IMG_DOMAI", "\"http://www.chaopoo.com\""
             buildConfigField "boolean", "LOGSWITCH", "false"
         }
     }

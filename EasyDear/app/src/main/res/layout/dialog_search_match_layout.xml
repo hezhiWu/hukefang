@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#cccccc">
 
-    <com.yunwei.easyDear.view.MeasuredListView
+    <com.yunwei.easydear.view.MeasuredListView
         android:id="@+id/search_matched_listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#999999</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#cc6666</color>
 
     <color name="tab_active">#FF4081</color>
 
@@ -15,7 +15,7 @@
     <color name="gold_yellow">#FFCC00</color>
     <color name="wine_red">#DB6958</color>
     <color name="bright_red">#FF5722</color>
-    <color name="red">#f5473d</color>
+    <color name="red">#cc6666</color>
 
     <color name="line">#E6E6E8</color>
 

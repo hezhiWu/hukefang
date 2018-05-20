@@ -5,7 +5,7 @@
     android:background="@color/black"
     android:orientation="vertical">
 
-    <com.yunwei.easyDear.photoView.PhotoView
+    <com.yunwei.easydear.photoView.PhotoView
         android:id="@+id/item_showPicture_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

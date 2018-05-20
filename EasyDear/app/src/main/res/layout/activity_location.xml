@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.yunwei.easyDear.view.ReboundScrollView
+    <com.yunwei.easydear.view.ReboundScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -52,7 +52,7 @@
 
             </RelativeLayout>
 
-            <com.yunwei.easyDear.view.MeasuredGridView
+            <com.yunwei.easydear.view.MeasuredGridView
                 android:id="@+id/location_district_gridView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
                 android:textSize="13sp"
                 android:visibility="gone" />
 
-            <com.yunwei.easyDear.view.MeasuredGridView
+            <com.yunwei.easydear.view.MeasuredGridView
                 android:id="@+id/location_hot_city_gridView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp" />
 
-            <com.yunwei.easyDear.view.MeasuredListView
+            <com.yunwei.easydear.view.MeasuredListView
                 android:id="@+id/location_all_city_listView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -123,5 +123,5 @@
 
         </LinearLayout>
 
-    </com.yunwei.easyDear.view.ReboundScrollView>
+    </com.yunwei.easydear.view.ReboundScrollView>
 </LinearLayout>

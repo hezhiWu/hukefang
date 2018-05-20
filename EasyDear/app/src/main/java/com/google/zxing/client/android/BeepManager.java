@@ -23,7 +23,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.util.Log;
 
-import com.yunwei.easyDear.R;
+import com.yunwei.easydear.R;
 
 import java.io.Closeable;
 import java.io.IOException;

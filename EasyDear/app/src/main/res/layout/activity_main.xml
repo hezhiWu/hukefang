@@ -10,7 +10,7 @@
         android:layout_above="@+id/main_bottom_navigationBar"
         android:visibility="visible" />
 
-    <com.yunwei.easyDear.view.MainBottomNavigationBar
+    <com.yunwei.easydear.view.MainBottomNavigationBar
         android:id="@+id/main_bottom_navigationBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

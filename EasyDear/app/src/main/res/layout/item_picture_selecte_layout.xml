@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.yunwei.easyDear.view.PhotoAlbumImageView
+        <com.yunwei.easydear.view.PhotoAlbumImageView
             android:id="@+id/ItemSelectePicture_imageView"
             android:layout_width="match_parent"
             android:layout_height="100dip"

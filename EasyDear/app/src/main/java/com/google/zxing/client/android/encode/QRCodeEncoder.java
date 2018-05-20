@@ -31,7 +31,7 @@ import com.google.zxing.client.android.Intents;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.exception.WriterException;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import com.yunwei.easyDear.R;
+import com.yunwei.easydear.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

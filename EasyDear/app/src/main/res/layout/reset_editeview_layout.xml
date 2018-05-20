@@ -5,7 +5,6 @@
     android:gravity="center"
     android:orientation="vertical">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/defualt_editeview_height"
@@ -17,7 +16,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_margin="10dp"
-            android:src="@mipmap/login_user" />
+            android:src="@mipmap/login_user"
+            android:visibility="gone"/>
 
         <EditText
             android:id="@+id/reset_editView"
@@ -27,6 +27,7 @@
             android:layout_toRightOf="@+id/reset_editView_icon_iv"
             android:background="@color/transparency"
             android:hint="请输入"
+            android:layout_marginLeft="10dp"
             android:singleLine="true"
             android:textSize="16sp" />
 

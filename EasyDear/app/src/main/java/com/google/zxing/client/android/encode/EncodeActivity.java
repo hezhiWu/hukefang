@@ -22,7 +22,7 @@ import android.view.WindowManager;
 import com.google.zxing.exception.WriterException;
 import com.google.zxing.client.android.FinishListener;
 import com.google.zxing.client.android.Intents;
-import com.yunwei.easyDear.R;
+import com.yunwei.easydear.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -30,7 +30,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
 
 
 /**

@@ -3,10 +3,11 @@
     xmlns:edit="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/login_bj"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/login_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -14,26 +15,68 @@
         android:layout_marginRight="20dp"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_login_logo"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dip"
+            android:layout_above="@+id/login_layout"/>
 
-        <com.yunwei.easyDear.widget.ResetEditView
+        <com.yunwei.easydear.widget.ResetEditView
             android:id="@+id/loginActivity_account_editView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            edit:edite_icon="@mipmap/login_user" />
+            edit:edite_icon="@mipmap/login_user"
+            edit:edit_inputType="number"
+            edit:edit_hint="输入手机号码"/>
 
-        <com.yunwei.easyDear.widget.ResetEditView
+        <com.yunwei.easydear.widget.ResetEditView
             android:id="@+id/loginActivity_password_editView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             edit:edit_inputType="password"
-            edit:edite_icon="@mipmap/login_mima" />
+            edit:edite_icon="@mipmap/login_mima"
+            edit:edit_hint="输入验证码"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/defualt_editeview_height"
+            android:background="@color/white">
+
+            <EditText
+                android:id="@+id/loginActivity_login_vacode_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="输入验证码"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/loginActivity_login_vacode_Button"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="获取验证码"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:background="@drawable/button_white_selector"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/line_horizontal"/>
 
         <Button
             android:id="@+id/loginActivity_login_button"
-            style="@style/default_button_style"
+            style="@style/default_button_red_style"
             android:layout_marginTop="50dip"
-            android:background="@drawable/button_white_selector"
+            android:background="@drawable/common_btn_red_selector"
             android:text="登录" />
 
     </LinearLayout>

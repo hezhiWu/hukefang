@@ -15,14 +15,14 @@
         android:paddingRight="20dp">
 
 
-        <com.yunwei.easyDear.widget.ResetEditView
+        <com.yunwei.easydear.widget.ResetEditView
             android:id="@+id/registFragment_account_editView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             edit:edit_hint="输入手机号码"
             edit:edite_icon="@mipmap/login_user" />
 
-        <com.yunwei.easyDear.widget.ResetEditView
+        <com.yunwei.easydear.widget.ResetEditView
             android:id="@+id/registFragment_password_editView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

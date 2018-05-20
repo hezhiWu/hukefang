@@ -5,7 +5,7 @@
     android:background="@color/main_background"
     android:orientation="vertical">
 
-    <com.yunwei.easyDear.view.PullToRefreshRecyclerView
+    <com.yunwei.easydear.view.PullToRefreshRecyclerView
         android:id="@+id/msg_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

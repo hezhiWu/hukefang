@@ -18,7 +18,7 @@ package com.google.zxing.client.android;
 
 import com.google.zxing.ResultPoint;
 import com.google.zxing.client.android.camera.CameraManager;
-import com.yunwei.easyDear.R;
+import com.yunwei.easydear.R;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

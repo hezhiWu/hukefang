@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.yunwei.easyDear.view.ReboundScrollView
+    <com.yunwei.easydear.view.ReboundScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -31,7 +31,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <com.yunwei.easyDear.view.SwitchButton
+                <com.yunwei.easydear.view.SwitchButton
                     android:id="@+id/messageSetingFragment_voice_switchButton"
                     style="@style/SwitchButtonMD"
                     android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <com.yunwei.easyDear.view.SwitchButton
+                <com.yunwei.easydear.view.SwitchButton
                     android:id="@+id/messageSetingFragment_notice_switchButton"
                     style="@style/SwitchButtonMD"
                     android:layout_width="wrap_content"
@@ -73,5 +73,5 @@
 
             <View style="@style/line"/>
         </LinearLayout>
-    </com.yunwei.easyDear.view.ReboundScrollView>
+    </com.yunwei.easydear.view.ReboundScrollView>
 </LinearLayout>

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.yunwei.easyDear.view.ReboundScrollView
+    <com.yunwei.easydear.view.ReboundScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
@@ -221,5 +221,5 @@
             </ListView>
 
         </LinearLayout>
-    </com.yunwei.easyDear.view.ReboundScrollView>
+    </com.yunwei.easydear.view.ReboundScrollView>
 </LinearLayout>

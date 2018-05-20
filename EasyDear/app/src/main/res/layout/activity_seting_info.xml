@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:id="@+id/Seting_root_view">
 
-    <com.yunwei.easyDear.view.ReboundScrollView
+    <com.yunwei.easydear.view.ReboundScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
@@ -254,5 +254,5 @@
                 android:text="登录当前用户" />
         </LinearLayout>
 
-    </com.yunwei.easyDear.view.ReboundScrollView>
+    </com.yunwei.easydear.view.ReboundScrollView>
 </LinearLayout>

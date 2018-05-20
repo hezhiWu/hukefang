@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yunwei.easyDear">
+    package="com.yunwei.easydear">
 
     <!--用于进行网络定位-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -28,7 +28,7 @@
 
 
     <application
-        android:name=".base.DataApplication"
+        android:name="com.yunwei.easydear.base.DataApplication"
         android:allowBackup="true"
         android:icon="@mipmap/icon_app"
         android:label="@string/app_name"
@@ -36,7 +36,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".function.account.SplashActivity"
+            android:name="com.yunwei.easydear.function.account.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NotitleTheme">
             <intent-filter>
@@ -47,88 +47,89 @@
         </activity>
 
         <activity
-            android:name=".function.mainFuncations.MainActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
         <activity
-            android:name=".function.account.LoginActivity"
+            android:name="com.yunwei.easydear.function.account.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.mineFuncation.SetingInfoActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.mineFuncation.SetingInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.account.LoginRegistActivity"
+            android:name="com.yunwei.easydear.function.account.LoginRegistActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.account.RestPasswordActivity"
+            android:name="com.yunwei.easydear.function.account.RestPasswordActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.searchFunction.SearchActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.searchFunction.SearchActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.locationFunction.LocationActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.locationFunction.LocationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.articleFunction.ArticleActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.articleFunction.ArticleActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
+        //CardDetailActivity
         <activity
             android:name=".function.mainFuncations.cardDetailFunction.CardDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.messageFunction.MessageActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.messageFunction.MessageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.messageFunction.MessageDetailActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.messageFunction.MessageDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.businessFunction.BusinessActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.businessFunction.BusinessActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.myorderlistFunction.MyOrderActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.myorderlistFunction.MyOrderActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.mycardlistFunction.MyCardActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.mycardlistFunction.MyCardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.mymemberlistFunction.MyMemberActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.mymemberlistFunction.MyMemberActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.membercenterFunction.MemberCenterActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.membercenterFunction.MemberCenterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.cardpayFunction.CardPayActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.cardpayFunction.CardPayActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
@@ -138,22 +139,22 @@
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.pictureFuncation.SelectPictureActivity"
+            android:name="com.yunwei.easydear.function.pictureFuncation.SelectPictureActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.pictureFuncation.ShowPictureActivity"
+            android:name="com.yunwei.easydear.function.pictureFuncation.ShowPictureActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.mineFuncation.UpdateActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.mineFuncation.UpdateActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 
         <activity
-            android:name=".function.mainFuncations.mineFuncation.AboutActivity"
+            android:name="com.yunwei.easydear.function.mainFuncations.mineFuncation.AboutActivity"
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme" />
 

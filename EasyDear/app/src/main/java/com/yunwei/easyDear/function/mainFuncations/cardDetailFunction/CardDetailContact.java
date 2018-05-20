@@ -1,6 +1,6 @@
-package com.yunwei.easyDear.function.mainFuncations.cardDetailFunction;
+package com.yunwei.easydear.function.mainFuncations.cardDetailFunction;
 
-import com.yunwei.easyDear.function.mainFuncations.businessFunction.CardItemEntity;
+import com.yunwei.easydear.function.mainFuncations.businessFunction.CardItemEntity;
 
 /**
  * Created by LJH on 2017/1/21.

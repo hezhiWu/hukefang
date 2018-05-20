@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.yunwei.easyDear.view.ReboundScrollView
+    <com.yunwei.easydear.view.ReboundScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
@@ -183,7 +183,7 @@
 
             </RelativeLayout>
 
-            <com.yunwei.easyDear.view.PullToRefreshRecyclerView
+            <com.yunwei.easydear.view.PullToRefreshRecyclerView
                 android:id="@+id/business_cardlist_recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="150dp" />
@@ -214,5 +214,5 @@
 
         </LinearLayout>
 
-    </com.yunwei.easyDear.view.ReboundScrollView>
+    </com.yunwei.easydear.view.ReboundScrollView>
 </LinearLayout>
