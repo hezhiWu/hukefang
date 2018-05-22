@@ -11,6 +11,8 @@ import com.yunwei.easydear.R;
 import com.yunwei.easydear.base.BaseFragment;
 import com.yunwei.easydear.base.BaseRecyclerViewAdapter;
 import com.yunwei.easydear.common.dialog.ToastUtil;
+import com.yunwei.easydear.function.business.BusinessDetailsActivity;
+import com.yunwei.easydear.function.business.data.BusinessDetailEntity;
 import com.yunwei.easydear.function.mainFuncations.articleFunction.ArticleActivity;
 import com.yunwei.easydear.function.mainFuncations.articleFunction.ArticleItemEntity;
 import com.yunwei.easydear.function.mainFuncations.findFuncation.data.source.ChildTabRemoteRepo;
@@ -163,6 +165,16 @@ public class ChildTabContentFragment extends BaseFragment implements ChildTabCon
 
     @Override
     public void onItemClick(View view, Object data, int position) {
-        ISkipActivityUtil.startIntent(getActivity(), ArticleActivity.class);
+        ArticleItemEntity entity=adapter.getList().get(position);
+
+        if (entity==null){
+            ToastUtil.showToast(getContext(),"Data Null");
+            return;
+        }
+
+        Bundle bundle=new Bundle();
+        bundle.putString("businessNo",entity.getBusinessNo());
+
+        ISkipActivityUtil.startIntent(getActivity(), BusinessDetailsActivity.class,bundle);
     }
 }

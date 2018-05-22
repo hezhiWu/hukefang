@@ -17,12 +17,19 @@ import com.yunwei.easydear.base.BaseFragment;
 import com.yunwei.easydear.base.DataApplication;
 import com.yunwei.easydear.function.account.data.UserInfoEntity;
 import com.yunwei.easydear.function.mainFuncations.mycardlistFunction.MyCardActivity;
+import com.yunwei.easydear.function.mainFuncations.mymemberlistFunction.BusinessContract;
+import com.yunwei.easydear.function.mainFuncations.mymemberlistFunction.MemberBusinessPresenter;
 import com.yunwei.easydear.function.mainFuncations.mymemberlistFunction.MyMemberActivity;
+import com.yunwei.easydear.function.mainFuncations.mymemberlistFunction.MyMemberAdapter;
+import com.yunwei.easydear.function.mainFuncations.mymemberlistFunction.data.BusinessEntity;
 import com.yunwei.easydear.function.mainFuncations.myorderlistFunction.MyOrderActivity;
 import com.yunwei.easydear.utils.ISkipActivityUtil;
 import com.yunwei.easydear.utils.IUtil;
 import com.yunwei.easydear.utils.QRCodeWriter;
+import com.yunwei.easydear.view.PullToRefreshRecyclerView;
 import com.yunwei.easydear.view.RoundedBitmapImageViewTarget;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,7 +43,7 @@ import butterknife.OnClick;
  * Version:1.0
  */
 
-public class MembershipCodeFragment extends BaseFragment {
+public class MembershipCodeFragment extends BaseFragment implements PullToRefreshRecyclerView.PullToRefreshRecyclerViewListener, BusinessContract.BusinessView {
 
     private static MembershipCodeFragment fagment;
     @BindView(R.id.MembershiFrgment_bg_iv)
@@ -53,8 +60,16 @@ public class MembershipCodeFragment extends BaseFragment {
     TextView businessCountTextView;
     @BindView(R.id.MembershipFragment_bill_count_textView)
     TextView billCountTextView;
+    @BindView(R.id.MembershiFrgment_RecyclerView)
+    PullToRefreshRecyclerView mRecyclerView;
 
     private BillPresenter billPresenter;
+
+    private MyMemberAdapter adapter;
+
+    private MemberBusinessPresenter memberBusinessPresenter;
+
+    private int defaultPageSize = 1;
 
     public static MembershipCodeFragment newInstance() {
         if (fagment == null) {
@@ -68,9 +83,27 @@ public class MembershipCodeFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.main_frgment_membership, null);
         ButterKnife.bind(this, rootView);
-        initUI();
-        initCountUI();
+//        initUI();
+//        initCountUI();
+
+
+       memberBusinessPresenter = new MemberBusinessPresenter(this);
+
+        initRecyclerView();
+
         return rootView;
+    }
+
+    /**
+     * 初始化RecyclerView
+     */
+    private void initRecyclerView() {
+        adapter = new MyMemberAdapter(getActivity());
+        mRecyclerView.setPullToRefreshListener(this);
+        mRecyclerView.setRecyclerViewAdapter(adapter);
+
+        mRecyclerView.startUpRefresh();
+
     }
 
     private void initUI() {
@@ -162,5 +195,54 @@ public class MembershipCodeFragment extends BaseFragment {
                 ISkipActivityUtil.startIntent(getActivity(), MyOrderActivity.class);
                 break;
         }
+    }
+
+    @Override
+    public void onDownRefresh() {
+        defaultPageSize = 1;
+        memberBusinessPresenter.reqBusinessListAction();
+    }
+
+    @Override
+    public void onPullRefresh() {
+        defaultPageSize++;
+        memberBusinessPresenter.reqBusinessListAction();
+    }
+
+    @Override
+    public void onBusinessStart() {
+
+    }
+
+    @Override
+    public void onBusinessEnd() {
+        mRecyclerView.closeDownRefresh();
+        mRecyclerView.onLoadMoreFinish();
+    }
+
+    @Override
+    public void onBusinessSuccess(List<BusinessEntity> list) {
+        adapter.addItems(list);
+    }
+
+    @Override
+    public void onBusinessFaliure(String error) {
+//        showToast(error);
+        mRecyclerView.setEmptyTextView();
+    }
+
+    @Override
+    public String getUserNo() {
+        return DataApplication.getInstance().getUserInfoEntity().getUserNo();
+    }
+
+    @Override
+    public int getPageSize() {
+        return defaultPageSize;
+    }
+
+    @Override
+    public int getPageCount() {
+        return 20;
     }
 }

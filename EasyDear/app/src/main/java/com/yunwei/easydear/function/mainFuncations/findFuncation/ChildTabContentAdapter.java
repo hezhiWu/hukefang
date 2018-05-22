@@ -31,7 +31,7 @@ import butterknife.ButterKnife;
  * Version:1.0
  */
 
-public class ChildTabContentAdapter extends BaseRecyclerViewAdapter<ArticleItemEntity> implements BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener {
+public class ChildTabContentAdapter extends BaseRecyclerViewAdapter<ArticleItemEntity>{
 
     public ChildTabContentAdapter(Context context) {
         super(context);
@@ -58,27 +58,21 @@ public class ChildTabContentAdapter extends BaseRecyclerViewAdapter<ArticleItemE
         Glide.with(mContent).load(BuildConfig.IMG_DOMAI + entity.getLogo()).asBitmap().centerCrop().into(new RoundedBitmapImageViewTarget(viewHolder.headView));
         Glide.with(mContent).load(BuildConfig.IMG_DOMAI + entity.getSloganImages()).into(viewHolder.articleImageView);
 
-        viewHolder.layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bundle bundle=new Bundle();
-                bundle.putString("id",mLists.get(position).getBusinessNo());
-                bundle.putString("businessNo",mLists.get(position).getBusinessNo());
-                ISkipActivityUtil.startIntent(mContent, ArticleActivity.class,bundle);
-            }
-        });
+//        viewHolder.layout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Bundle bundle=new Bundle();
+//                bundle.putString("id",mLists.get(position).getBusinessNo());
+//                bundle.putString("businessNo",mLists.get(position).getBusinessNo());
+//                ISkipActivityUtil.startIntent(mContent, ArticleActivity.class,bundle);
+//            }
+//        });
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateBaseViewHolder(ViewGroup parent, int viewType) {
         ItemViewHolder viewHolder = new ItemViewHolder(inflater.inflate(R.layout.item_tab_child_layout, parent, false));
-        setOnItemClickListener(this);
         return viewHolder;
-    }
-
-    @Override
-    public void onItemClick(View view, Object data, int position) {
-
     }
 
     class ItemViewHolder extends RecyclerView.ViewHolder {

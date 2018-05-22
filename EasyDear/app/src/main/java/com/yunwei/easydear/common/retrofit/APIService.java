@@ -170,6 +170,15 @@ public interface APIService {
                                                                          @Query("userNo") String userNo);
 
     /**
+     * 获取商家详情
+     *
+     * @param businessNo
+     * @return
+     */
+    @GET("business/businessIndex")
+    Call<ResponseModel<com.yunwei.easydear.function.business.data.BusinessDetailEntity>> queryBuniessDetail(@Query("businessNo") String businessNo);
+
+    /**
      * 动态列表
      *
      * @param pageSize

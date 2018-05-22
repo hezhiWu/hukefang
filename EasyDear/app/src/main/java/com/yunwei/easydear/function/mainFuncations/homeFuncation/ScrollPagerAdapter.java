@@ -43,11 +43,11 @@ public class ScrollPagerAdapter extends PagerAdapter implements View.OnClickList
             return;
         }
         for (ArticleItemEntity entity : mArticleList) {
-//            entity.setArticleImage(BuildConfig.DOMAI + entity.getArticleImage());
-//            ImageView iv = new ImageView(mContext);
-//            iv.setScaleType(ImageView.ScaleType.FIT_XY);
-//            Glide.with(mContext).load(entity.getArticleImage()).into(iv);
-//            mImageViewList.add(iv);
+//            entity.setLogo(BuildConfig.DOMAI + entity.getArticleImage());
+            ImageView iv = new ImageView(mContext);
+            iv.setScaleType(ImageView.ScaleType.FIT_XY);
+            Glide.with(mContext).load(BuildConfig.IMG_DOMAI+entity.getLogo()).into(iv);
+            mImageViewList.add(iv);
         }
     }
 
@@ -80,7 +80,7 @@ public class ScrollPagerAdapter extends PagerAdapter implements View.OnClickList
                 Bundle bundle = new Bundle();
 //                bundle.putString("id", mArticleList.get(mImagePosition).getArticleId());
 //                bundle.putString("businessNo",mArticleList.get(mImagePosition).getBusinessNO());
-                ISkipActivityUtil.startIntent(mContext, ArticleActivity.class, bundle);
+//                ISkipActivityUtil.startIntent(mContext, ArticleActivity.class, bundle);
             }
         });
         container.addView(iv);
@@ -93,6 +93,6 @@ public class ScrollPagerAdapter extends PagerAdapter implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        ISkipActivityUtil.startIntent(mContext, ArticleActivity.class);
+//        ISkipActivityUtil.startIntent(mContext, ArticleActivity.class);
     }
 }

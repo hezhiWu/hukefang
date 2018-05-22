@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.View;
 
 import com.amap.api.location.AMapLocation;
+import com.google.zxing.client.android.CaptureActivity;
 import com.yunwei.easydear.R;
 import com.yunwei.easydear.base.DataApplication;
 import com.yunwei.easydear.common.Constant;
@@ -22,6 +23,7 @@ import com.yunwei.easydear.function.mainFuncations.mineFuncation.MineFragment;
 import com.yunwei.easydear.function.mainFuncations.findFuncation.FindFragment;
 import com.yunwei.easydear.function.mainFuncations.qrcode.ScanQrFragment;
 import com.yunwei.easydear.utils.IActivityManage;
+import com.yunwei.easydear.utils.ISkipActivityUtil;
 import com.yunwei.easydear.utils.ISpfUtil;
 import com.yunwei.easydear.view.MainBottomNavigationBar;
 
@@ -153,13 +155,14 @@ public class MainActivity extends BaseActivity implements MainBottomNavigationBa
                 break;
             case TAB_TRAINGCODE:
                 this.currentTab=position;
-                setToolbarCenterTitle(R.string.main_block_tab);
+                setToolbarCenterTitle("我的权益");
                 setToolbarVisibility(View.VISIBLE);
                 break;
             case TAB_MESSAGE:
                 this.currentTab=position;
                 setToolbarCenterTitle(R.string.main_message_tab);
                 setToolbarVisibility(View.GONE);
+                ISkipActivityUtil.startIntent(this, CaptureActivity.class);
                 break;
             case TAB_MINE:
                 this.currentTab=position;

@@ -81,7 +81,7 @@ public class ScanQrFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         TextView textView = new TextView(getActivity());
-        textView.setText("扫一扫添加好友");
+//        textView.setText("扫一扫添加好友");
         return textView;
     }
 }

@@ -134,11 +134,36 @@ public class MineFragment extends BaseFragment implements MineContact.MineView, 
     }
 
     @OnClick({R.id.mineFragment_setting_tv, R.id.mine_card_amount_container, R.id.mine_business_amount_container,
-            R.id.mineFragment_all_order_layout, R.id.mineFragment_all_business_layout, R.id.mineFragment_tontact_layout, R.id.mineFragment_into_business_layout})
+            R.id.mineFragment_fankui_layout,R.id.mineFragment_all_order_layout, R.id.mineFragment_all_business_layout, R.id.mineFragment_tontact_layout, R.id.mineFragment_into_business_layout})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.mineFragment_setting_tv:
                 ISkipActivityUtil.startIntent(getActivity(), SetingInfoActivity.class);
+                break;
+            case R.id.mineFragment_fankui_layout:
+                View businessView = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_tontact_layout, null);
+                final TextView tell1 = (TextView) businessView.findViewById(R.id.dialog_tontact_tel1);
+                final TextView tell2 = (TextView) businessView.findViewById(R.id.dialog_tontact_tel2);
+                businessView.findViewById(R.id.dialog_tontact_calcel_btn).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        commPopupWindow.dismiss();
+                    }
+                });
+                tell1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ISystemUtil.callTelAction(getContext(), tell1.getText().toString());
+                    }
+                });
+                tell2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ISystemUtil.callTelAction(getContext(), tell1.getText().toString());
+                    }
+                });
+                commPopupWindow = new CommPopupWindow(businessView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                commPopupWindow.showAtButton(getView());
                 break;
             case R.id.mine_card_amount_container:
                 ISkipActivityUtil.startIntent(getActivity(), MyCardActivity.class);
@@ -178,29 +203,9 @@ public class MineFragment extends BaseFragment implements MineContact.MineView, 
                 commPopupWindow.showAtButton(getView());
                 break;
             case R.id.mineFragment_into_business_layout:/*联系商家*/
-                View businessView = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_tontact_layout, null);
-                final TextView tell1 = (TextView) businessView.findViewById(R.id.dialog_tontact_tel1);
-                final TextView tell2 = (TextView) businessView.findViewById(R.id.dialog_tontact_tel2);
-                businessView.findViewById(R.id.dialog_tontact_calcel_btn).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        commPopupWindow.dismiss();
-                    }
-                });
-                tell1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        ISystemUtil.callTelAction(getContext(), tell1.getText().toString());
-                    }
-                });
-                tell2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        ISystemUtil.callTelAction(getContext(), tell1.getText().toString());
-                    }
-                });
-                commPopupWindow = new CommPopupWindow(businessView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                commPopupWindow.showAtButton(getView());
+//
+
+                ISkipActivityUtil.startIntent(getContext(),AboutActivity.class);
                 break;
         }
     }

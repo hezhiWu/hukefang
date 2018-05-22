@@ -20,6 +20,6 @@ public class AboutActivity extends BaseActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        setToolbarTitle("关于易兑");
+        setToolbarTitle("关于潮铺");
     }
 }

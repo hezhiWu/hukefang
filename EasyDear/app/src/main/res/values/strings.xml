@@ -4,7 +4,7 @@
     <!--Main Tab-->
     <string name="main_home_tab">首页</string>
     <string name="main_dynamic_tab">商家</string>
-    <string name="main_block_tab">卡包</string>
+    <string name="main_block_tab">权益</string>
     <string name="main_message_tab">消息</string>
     <string name="main_mine_tab">我的</string>
     <string name="main_qr_tab">扫一扫</string>

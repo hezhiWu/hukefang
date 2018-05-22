@@ -4,9 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <com.yunwei.easydear.view.PullToRefreshRecyclerView
+        android:id="@+id/MembershiFrgment_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <com.yunwei.easydear.view.ReboundScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"

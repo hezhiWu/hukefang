@@ -86,6 +86,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/JK.SwipeBack.Transparent.Theme"/>
 
+        <activity android:name=".function.business.BusinessDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/JK.SwipeBack.Transparent.Theme"/>
+
         <activity
             android:name="com.yunwei.easydear.function.mainFuncations.articleFunction.ArticleActivity"
             android:screenOrientation="portrait"
