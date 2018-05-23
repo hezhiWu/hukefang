@@ -107,6 +107,18 @@ public interface APIService {
     Call<ResponseModel<List<BusinessEntity>>> reqBusinessList(@Query("userNo") String userNo, @Query("getPageSize") int pageSize, @Query("getPageCount") int pageCount);
 
     /**
+     * 卡包列表
+     *
+     * @param pageSize
+     * @param pageCount
+     * @param keywords
+     * @return
+     */
+    @GET("card/listByKey")
+    Call<ResponseModel<List<com.yunwei.easydear.function.cards.data.CardEntity>>> queryCards(@Query("pageSize") int pageSize,
+                                                                                             @Query("pageCount") int pageCount,
+                                                                                             @Query("keywords") String keywords);
+    /**
      * 消费券列表
      *
      * @param userNo

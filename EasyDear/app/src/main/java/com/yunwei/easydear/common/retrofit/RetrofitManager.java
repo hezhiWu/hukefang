@@ -61,7 +61,7 @@ public class RetrofitManager {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request().newBuilder()
-                        .addHeader("Authorization", "bearer " + ISpfUtil.getValue(Constant.ACCESS_TOKEN_KEY, "").toString())
+                        .addHeader("token",ISpfUtil.getValue(Constant.ACCESS_TOKEN_KEY, "").toString())
                         .build();
                 return chain.proceed(request);
             }
